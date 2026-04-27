@@ -1,0 +1,240 @@
+.page {
+  display: flex;
+  justify-content: center;
+  padding: 28px;
+  background: #f5f7fb;
+  min-height: 100vh;
+  font-family: var(--font-geist-sans);
+}
+
+.main {
+  width: 100%;
+  max-width: 1100px;
+  display: grid;
+  gap: 18px;
+}
+
+.header {
+  background: #ffffff;
+  border: 1px solid #dde3ee;
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.header h1 {
+  font-size: 28px;
+  margin-bottom: 8px;
+  color: #141a24;
+}
+
+.header p {
+  color: #4a5567;
+  max-width: 800px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.statCard {
+  background: #ffffff;
+  border: 1px solid #dde3ee;
+  border-radius: 12px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.statCard span {
+  color: #5e6878;
+  font-size: 13px;
+}
+
+.statCard strong {
+  color: #0f172a;
+  font-size: 28px;
+  line-height: 1;
+}
+
+.controls {
+  background: #ffffff;
+  border: 1px solid #dde3ee;
+  border-radius: 12px;
+  padding: 12px;
+  display: grid;
+  grid-template-columns: 2fr repeat(3, minmax(140px, 1fr)) auto;
+  gap: 10px;
+  align-items: center;
+}
+
+.controls select,
+.search {
+  border: 1px solid #cfd7e6;
+  border-radius: 10px;
+  height: 40px;
+  padding: 0 12px;
+  background: #fff;
+  color: #111827;
+}
+
+.search::placeholder {
+  color: #8b95a7;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #334155;
+  font-size: 14px;
+}
+
+.todoList {
+  display: grid;
+  gap: 12px;
+}
+
+.todoCard {
+  background: #ffffff;
+  border: 1px solid #dde3ee;
+  border-radius: 12px;
+  padding: 14px;
+  display: grid;
+  gap: 10px;
+}
+
+.todoTop {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+}
+
+.todoTop h2 {
+  font-size: 16px;
+  color: #111827;
+}
+
+.todoCard p {
+  color: #4b5563;
+  font-size: 14px;
+}
+
+.todoMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.todoMeta span {
+  background: #f1f5f9;
+  color: #334155;
+  font-size: 12px;
+  border-radius: 999px;
+  padding: 6px 9px;
+}
+
+.riskBadge {
+  color: #fff;
+  font-size: 12px;
+  border-radius: 999px;
+  padding: 6px 10px;
+  min-width: fit-content;
+}
+
+.riskLow {
+  background: #16a34a;
+}
+
+.riskMedium {
+  background: #d97706;
+}
+
+.riskHigh {
+  background: #dc2626;
+}
+
+.riskCritical {
+  background: #7f1d1d;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  border: 1px solid #dbe4f0;
+  color: #3b4452;
+  font-size: 12px;
+  border-radius: 999px;
+  padding: 5px 9px;
+}
+
+.emptyState {
+  text-align: center;
+  color: #526077;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px dashed #c8d2e3;
+  padding: 24px;
+}
+
+@media (max-width: 900px) {
+  .controls {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .page {
+    background: #09101f;
+  }
+
+  .header,
+  .statCard,
+  .controls,
+  .todoCard,
+  .emptyState {
+    background: #0f172a;
+    border-color: #23314c;
+  }
+
+  .header h1,
+  .todoTop h2,
+  .statCard strong {
+    color: #e2e8f0;
+  }
+
+  .header p,
+  .todoCard p,
+  .statCard span,
+  .checkbox,
+  .tag {
+    color: #93a4be;
+  }
+
+  .controls select,
+  .search {
+    background: #111d35;
+    border-color: #293d61;
+    color: #d7e2f1;
+  }
+
+  .todoMeta span {
+    background: #1c2942;
+    color: #b7c4d7;
+  }
+
+  .tag {
+    border-color: #334967;
+  }
+
+  .emptyState {
+    border-color: #334967;
+  }
+}
