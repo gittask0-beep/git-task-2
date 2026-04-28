@@ -16,9 +16,9 @@ const categories: Array<"All" | TodoCategory> = [
   "Meetings",
   "Admin",
 ];
-
+// TODO: Do new things
 const statuses: Array<"All" | TodoStatus> = ["All", "Pending", "In Progress", "Done"];
-
+// HACK: Fix this!
 export default function TodoScanner() {
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState<(typeof categories)[number]>("All");
